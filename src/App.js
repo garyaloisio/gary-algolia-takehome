@@ -46,7 +46,7 @@ class App extends Component {
     return (
       <div className="ais-InstantSearch">
         <h1>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Best_Buy_Logo.svg/1280px-Best_Buy_Logo.svg.png" className="resize" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Best_Buy_Logo.svg/1280px-Best_Buy_Logo.svg.png" className="image" />
         </h1>
         <InstantSearch indexName="garytest_PRODUCTS" searchClient={searchClient}
         >

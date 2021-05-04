@@ -1,0 +1,82 @@
+Question 1: I'm new to search engines, and there are a lot of concepts I'm not educated on. To make my onboarding smoother, it'd help if you could provide me with some definitions of the following concepts:
+Records
+Indexing
+I'm also struggling with understanding what types of metrics would be useful to include in the "Custom Ranking."
+Cheers, George
+
+Answer 1:
+
+Hello George,
+
+Welcome to Algolia! I'd be happy to assist you as you get acquainted with our search API. If you have any additional questions or need more clarification please feel free to reach back out to me and I would be happy to help.
+
+Here are some detailed explanations about the concepts you discussed:
+
+Records:
+
+Each item that is stored within an index is a record. A record is a JSON schemaless object that you wish to make searchable and you add this record to your index. You can upload your JSON object aka “records” using our API or you can do it through our dashboard. Each attribute in a record can be used for searching, displaying, filtering, or ranking. Here is a link to some documentation that can help you get started https://www.algolia.com/doc/guides/getting-started/quick-start/tutorials/getting-started-with-the-dashboard/#dashboard-sections. If you'd like I would be happy to hop on a call and walk you through uploading your data.
+
+Indexing:
+
+Indexing is a system we use at Algolia where you import the data to us and we store it and once stored you can perform unlimited searches on it. Each index within Algolia is associated with a table within a database and the index is highly optimized for searches.
+
+As for your question about Custom Ranking, one instance of this might be adding a popularity attribute. For example, if you own an electronic store and a user wants to search for a “TV”, he/she will get a result sorted by the popularity value associated with each TV and not alphabetical sorting. We may want to dive a little deeper so I can understand how your business metrics can be used effectively in a search scenario. Would you be available for a call to discuss this in greater detail?
+
+All the Best,
+Gary Aloisio
+
+________________________________________________________________
+
+
+Question 2: Hello,
+Sorry to give you the kind of feedback that I know you do not want to hear, but I really hate the new dashboard design. Clearing and deleting indexes are now several clicks away. I am needing to use these features while iterating, so this is inconvenient.
+Regards, Matt
+
+Answer 2:
+
+Hello Matt,
+
+I am so sorry the new dashboard design is not working for you. At Algolia, we’re constantly looking for new ways to effectively best display the data and tools you need as a user.
+
+With the new design, we added a multiple select feature to make it easier to clear and delete multiple indexes right from the dashboard. From your Indices tab in your dashboard you can click on the downward arrow next to your Indices at the top of the screen and then click on the "see all indices" button on the bottom right of the menu that is displayed. Users can then click the select button in the top left to enter into the multiple selection mode. While doing this, in the top right you can decide to clear or delete as many indexes as you like. You can also search for specific indexes or organize them from A-Z, Last Updated, Oldest Updated or Number of Records(From High to Low).
+
+May I ask how you’re currently deleting or clearing indexes? Are you clicking into the index, then clearing or deleting from there?
+
+Thank you for your feedback! It really helps as we're always looking for ways to help improve Algolia!
+
+All the best,
+Gary Aloisio
+
+________________________________________________________________
+
+Question 3: Hi,
+I'm looking to integrate Algolia in my website. Will this be a lot of development work for me? What's the high level process look like?
+Regards, Leo
+
+Hello Leo,
+
+Thank you for checking out Algolia!
+
+It is our goal to make implementation a smooth and simple process. We are constantly thinking of ways to make the developer experience the best it can be. We provide extensive documentation, guides in multiple programming languages, and 24/7 support to help at any point in the development process. There’s also an active community around Algolia to help you build an amazing search.
+
+To give you the high level overview you were asking for, these links might be helpful:
+
+Algolia overview: https://www.algolia.com/doc/guides/getting-started/the-implementation-process/
+
+Directory of tutorials and code samples: https://www.algolia.com/doc/tutorials/
+
+Getting started with our API: https://www.algolia.com/doc/tutorials/getting-started/quick-start-with-the-api-client/javascript/
+
+Interactive Tutorial: https://www.algolia.com/doc/onboarding
+
+Discussion Board: https://discourse.algolia.com/
+
+If you are more of a visual person and would like to see someone live coding Algolia please check out our youtube page which has numerous videos to help you get started: https://www.youtube.com/channel/UCTNkiq-SO8hay1PRx-it9Cw
+
+
+If those don’t provide what you’re looking for, feel free to respond here and I’d be happy to answer any additional questions!
+
+PS: We have a 14 day trial, so if you want to sign up and tinker around, there is absolutely no cost to you and requires no credit card information. Here’s where you can create an account: https://www.algolia.com/users/sign_up
+
+All the best,
+Gary Aloisio
