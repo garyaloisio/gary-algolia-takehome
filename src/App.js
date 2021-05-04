@@ -9,7 +9,8 @@ import {
   RefinementList,
   Configure,
   Stats,
-  NumericMenu
+  NumericMenu,
+  SortBy
 } from 'react-instantsearch-dom';
 import PropTypes from 'prop-types';
 
@@ -78,6 +79,14 @@ class App extends Component {
           <div className="right-panel">
             <SearchBox />
             <Stats />
+            <SortBy
+              defaultRefinement="garytest_PRODUCTS"
+              items={[
+                { value: 'garytest_PRODUCTS', label: 'Most Popular' },
+                { value: 'salePrice_asc', label: 'Lowest Price' },
+                { value: 'salePrice_desc', label: 'Highest Price' },
+              ]}
+            />
             <Hits hitComponent={Hit} />
             <Pagination showLast />
           </div>

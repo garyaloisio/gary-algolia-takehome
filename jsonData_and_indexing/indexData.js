@@ -7,6 +7,10 @@ index.saveObjects(products).then(({ objectIDs }) => {
   console.log(objectIDs);
 });
 
+const replicaIndexDesc = client.initIndex('salePrice_desc');
+const replicaIndexASC = client.initIndex('salePrice_asc');
+
+
 index.setSettings({
   searchableAttributes: [
     'manufacturer',
@@ -26,6 +30,27 @@ index.setSettings({
     'categories',
     'salePrice',
     'salePrice_range'
+  ],
+  replicas: [
+    'virtual(salePrice_desc)',
+    'virtual(salePrice_asc)',
+  ]
+}).then(() => {
+  // done
+});
+
+
+replicaIndexDesc.setSettings({
+  customRanking: [
+    "desc(salePrice)"
+  ]
+}).then(() => {
+  // done
+});
+
+replicaIndexASC.setSettings({
+  customRanking: [
+    "asc(salePrice)"
   ]
 }).then(() => {
   // done
