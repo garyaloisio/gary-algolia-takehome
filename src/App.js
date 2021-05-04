@@ -1,75 +1,97 @@
 import React, { Component } from 'react';
-import algoliasearch from 'algoliasearch/lite';
 import {
   InstantSearch,
   Hits,
   SearchBox,
   Pagination,
   Highlight,
+  ClearRefinements,
+  RefinementList,
+  Configure,
+  Stats,
+  NumericMenu
 } from 'react-instantsearch-dom';
 import PropTypes from 'prop-types';
+
 import './App.css';
+import algoliasearch from 'algoliasearch';
 
 const searchClient = algoliasearch(
   'VOKPX0FOW8',
-  '9457b78715fe1d575dce9eb68633c473'
+  "5a49c7fd5e235c6ecba57a625a7db623"
 );
+
+
+
+
+
+function Hit(props) {
+  return (
+    <div>
+      <img src={props.hit.image} align="left" alt={props.hit.name} />
+      <div className="hit-name">
+        <Highlight attribute="name" hit={props.hit} />
+      </div>
+      <div className="hit-price">${props.hit.salePrice}</div>
+      <div className="hit-description">
+        <div className="hit-price">{props.hit.shortDescription}</div>
+      </div>
+    </div>
+  );
+}
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <header className="header">
-          <h1 className="header-title">
-            <a href="/">gary-algolia-takehome</a>
-          </h1>
-          <p className="header-subtitle">
-            using{' '}
-            <a href="https://github.com/algolia/react-instantsearch">
-              React InstantSearch
-            </a>
-          </p>
-        </header>
-
-        <div className="container">
-          <InstantSearch
-            searchClient={searchClient}
-            indexName="garytest_PRODUCTS"
-          >
-            <div className="search-panel">
-              <div className="search-panel__results">
-                <SearchBox
-                  className="searchbox"
-                  translations={{
-                    placeholder: '',
-                  }}
-                />
-                <Hits hitComponent={Hit} />
-
-                <div className="pagination">
-                  <Pagination />
-                </div>
-              </div>
-            </div>
-          </InstantSearch>
-        </div>
+      <div className="ais-InstantSearch">
+        <h1>React InstantSearch e-commerce demo</h1>
+        <InstantSearch indexName="garytest_PRODUCTS" searchClient={searchClient}
+        >
+          <div className="left-panel">
+            <ClearRefinements />
+            <h2>Category</h2>
+            <RefinementList attribute="categories" showMore={true}
+              translations={{
+                showMore(extended) {
+                  return extended ? 'Show Less' : 'Show More';
+                }
+              }} />
+            <h2>Manufacturer</h2>
+            <RefinementList attribute="manufacturer" showMore={true}
+              translations={{
+                showMore(extended) {
+                  return extended ? 'Show Less' : 'Show More';
+                }
+              }} />
+            <h2>Sale Price</h2>
+            <NumericMenu
+              attribute="salePrice"
+              items={[
+                { label: '<= $10', end: 10 },
+                { label: '$10 - $100', start: 10, end: 100 },
+                { label: '$100 - $500', start: 100, end: 500 },
+                { label: '>= $500', start: 500 },
+              ]}
+            />
+            <Configure hitsPerPage={10} />
+          </div>
+          <div className="right-panel">
+            <SearchBox />
+            <Stats />
+            <Hits hitComponent={Hit} />
+            <Pagination showLast />
+          </div>
+        </InstantSearch>
       </div>
     );
   }
 }
 
-function Hit(props) {
-  return (
-    <article>
-      <h1>
-        <Highlight attribute="name" hit={props.hit} />
-      </h1>
-    </article>
-  );
-}
+
 
 Hit.propTypes = {
   hit: PropTypes.object.isRequired,
 };
 
 export default App;
+

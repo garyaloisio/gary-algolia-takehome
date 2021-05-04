@@ -12,7 +12,7 @@ index.setSettings({
     'manufacturer',
     'name',
     'categories',
-    'unordered(description)',
+    'unordered(shortDescription)',
     'salePrice',
     'type',
     'salePrice_range'
