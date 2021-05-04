@@ -1,13 +1,13 @@
 {
-  "main.css": "/static/css/main.6285a26f.chunk.css",
-  "main.js": "/static/js/main.e1fedabf.chunk.js",
-  "main.js.map": "/static/js/main.e1fedabf.chunk.js.map",
-  "static/js/1.329e5186.chunk.js": "/static/js/1.329e5186.chunk.js",
-  "static/js/1.329e5186.chunk.js.map": "/static/js/1.329e5186.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
-  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/css/main.6285a26f.chunk.css.map": "/static/css/main.6285a26f.chunk.css.map",
-  "index.html": "/index.html",
-  "precache-manifest.73f4abcdb710db0d65e711846f04e6b6.js": "/precache-manifest.73f4abcdb710db0d65e711846f04e6b6.js",
-  "service-worker.js": "/service-worker.js"
+  "main.css": "/gary-algolia-takehome/static/css/main.6285a26f.chunk.css",
+  "main.js": "/gary-algolia-takehome/static/js/main.e1fedabf.chunk.js",
+  "main.js.map": "/gary-algolia-takehome/static/js/main.e1fedabf.chunk.js.map",
+  "static/js/1.56ffaf1c.chunk.js": "/gary-algolia-takehome/static/js/1.56ffaf1c.chunk.js",
+  "static/js/1.56ffaf1c.chunk.js.map": "/gary-algolia-takehome/static/js/1.56ffaf1c.chunk.js.map",
+  "runtime~main.js": "/gary-algolia-takehome/static/js/runtime~main.d7277a3a.js",
+  "runtime~main.js.map": "/gary-algolia-takehome/static/js/runtime~main.d7277a3a.js.map",
+  "static/css/main.6285a26f.chunk.css.map": "/gary-algolia-takehome/static/css/main.6285a26f.chunk.css.map",
+  "index.html": "/gary-algolia-takehome/index.html",
+  "precache-manifest.7d1a7ae630e5a4da938ceecf854fa207.js": "/gary-algolia-takehome/precache-manifest.7d1a7ae630e5a4da938ceecf854fa207.js",
+  "service-worker.js": "/gary-algolia-takehome/service-worker.js"
 }
