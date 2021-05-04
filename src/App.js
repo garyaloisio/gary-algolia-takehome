@@ -45,7 +45,9 @@ class App extends Component {
   render() {
     return (
       <div className="ais-InstantSearch">
-        <h1>React InstantSearch e-commerce demo</h1>
+        <h1>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Best_Buy_Logo.svg/1280px-Best_Buy_Logo.svg.png" className="resize" />
+        </h1>
         <InstantSearch indexName="garytest_PRODUCTS" searchClient={searchClient}
         >
           <div className="left-panel">
@@ -74,7 +76,7 @@ class App extends Component {
                 { label: '>= $500', start: 500 },
               ]}
             />
-            <Configure hitsPerPage={10} />
+            <Configure hitsPerPage={6} />
           </div>
           <div className="right-panel">
             <SearchBox />
